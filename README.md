@@ -1,1 +1,25 @@
-# Bayes-Factor
+# Bayesian test of introgression 
+
+This repository implements the Bayesian test of introgression developed by Ji et al. (2022). The program calculates the Bayes factor via the Savage-Dickey density ratio using an MCMC sample under the MSci or MSC-M to evaluate the evidence for a proposed gene flow event. Note that the MSci models gene flow as a discrete event that occurred at some fixed time, with its magnitude estimated through the introgression probability, $\varphi$. In contrast, the MSC-M assumes continuous gene flow at a particular rate every generation, as denoted by the migration rate, $M$.
+
+The Bayes factor is defined as
+
+$$
+B_{10,\epsilon} = \frac{1-\mathbb{P}(ø|x)}{\mathbb{P}(ø|x)} \biggl/ \frac{1-\mathbb{P}(ø)}{\mathbb{P}(ø)} \approx \frac{\mathbb{P}(ø)}{\mathbb{P}(ø|x)},
+$$
+
+where $\mathbb{P}(ø|x)$ represents the proportion of MCMC samples in which $\varphi$ or $M$ are less than $\epsilon$, and $\mathbb{P}(ø)$ refers to the probability that a random value taken from the prior distribution on $\varphi$ or M is less than $\epsilon$ (given by the cumulative distribution function). Intuitively, $B_{10} \ll 1$ is evidence for $H_0$ (null model: no gene flow) and $B_{10} \gg 1$ is evidence for $H_1$ (alternative model: gene flow).
+
+# Installation
+
+The program is currently distributed as an R script.
+
+The following R package must be installed:
+
+- `stats` (>= 4.2.2)
+
+You can install this package in R with the following command:
+
+```r
+install.packages("stats")
+```
