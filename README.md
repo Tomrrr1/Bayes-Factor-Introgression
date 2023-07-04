@@ -48,15 +48,8 @@ For example:
 ```r
 Rscript BF-script.R BF_Gamma 2 10 0.1 /path/to/mcmc_file.txt 10 12:15
 ```
-
 would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.1, an MCMC sample file located at /path/to/mcmc_file.txt, and column indices of 10, 12 through 15.
-
-This example uses the \texttt{BF\_Gamma} function with \texttt{alpha} = 2, \texttt{beta} = 10, \texttt{epsilon} = 0.1, an MCMC sample file located at \texttt{/path/to/mcmc\_file.txt}, and column indices of 10, 12 through 15.
 
 # References
 
-Jiayi Ji, Donavan J Jackson, Adam D Leach&eacute;, and Ziheng Yang. Power of bayesian and heuristic tests to detect cross-species
-introgression with reference to gene flow in the tamias quadrivittatus group of north american chipmunks. Systematic
-Biology, 2022. ISSN 1063-5157
-
-
+Jiayi Ji, Donavan J Jackson, Adam D Leach&eacute;, and Ziheng Yang. Power of bayesian and heuristic tests to detect cross-species introgression with reference to gene flow in the tamias quadrivittatus group of north american chipmunks. Systematic Biology, 2022. ISSN 1063-5157
