@@ -46,9 +46,9 @@ column_indices    Column indices, separated by spaces. Ranges can be specified u
 For example:
 
 ```r
-Rscript BF-script.R BF_Gamma 2 10 0.1 /path/to/mcmc_file.txt 10 12:15
+Rscript BF-script.R BF_Gamma 2 10 0.01 /path/to/mcmc_file.txt 10 12:15
 ```
-would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.1, an MCMC sample file located at /path/to/mcmc_file.txt, and column indices of 10, 12 through 15.
+would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.01, an MCMC sample file located at /path/to/mcmc_file.txt, and column indices of 10, 12 through 15.
 
 # References
 
