@@ -1,0 +1,7 @@
+Bayes_Factor
+M_D_affinis -> D_lowei (0.01)	0.0225790954562517
+M_D_azteca -> D_lowei (0.01)	0.0742437346944537
+M_D_lowei -> D_affinis (0.01)	0.00467884016044447
+M_D_lowei -> D_azteca (0.01)	0.0216853919190048
+M_ap -> bo (0.01)	0.140168968257773
+M_bo -> ap (0.01)	Inf
