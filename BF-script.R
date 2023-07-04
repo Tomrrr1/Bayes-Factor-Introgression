@@ -4,11 +4,9 @@
 
 library(stats) 
 
-
 # Parse the command line arguments 
 
 args <- commandArgs(trailingOnly = TRUE)
-
 if (any(commandArgs(trailingOnly = TRUE) %in% "--help")) {
 
     cat("
@@ -32,19 +30,15 @@ Example:
     quit(save="no", status=0)
 }
 
-
 function_name <- args[1]
 alpha <- as.numeric(args[2])
 beta <- as.numeric(args[3])
 epsilon <- as.numeric(args[4])
 file <- args[5]
 
-
-
 # Handle column indices
 
 column_args <- args[6:length(args)]
-
 column_index <- integer(0)  # Empty integer vector to hold indices
 
 for (arg in column_args) {
@@ -63,11 +57,9 @@ for (arg in column_args) {
 
 }
 
-
 # Read in the MCMC sample file
 
 mcmc_file <- read.table(file, sep="\t", header=TRUE)
-
 
 # Define a helper function that computes the Bayes Factor for a single column index
 
