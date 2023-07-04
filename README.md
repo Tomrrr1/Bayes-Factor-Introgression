@@ -1,4 +1,4 @@
-# Bayesian test of introgression 
+# Bayesian test of introgression
 
 This repository implements the Bayesian test of introgression developed by Ji et al. (2022). The program calculates the Bayes factor via the Savage-Dickey density ratio using an MCMC sample under the MSci or MSC-M to evaluate the evidence for a proposed gene flow event. Note that the MSci models gene flow as a discrete event that occurred at some fixed time, with its magnitude estimated through the introgression probability, $\varphi$. In contrast, the MSC-M assumes continuous gene flow at a particular rate every generation, as denoted by the migration rate, $M$.
 
@@ -12,7 +12,11 @@ where $\mathbb{P}(ø|x)$ represents the proportion of MCMC samples in which $\va
 
 # Installation
 
-The program is currently distributed as an R script.
+The program is currently distributed as an R script. To install and run do the following:
+
+- Clone the repository or download the source files.
+- Navigate to the directory containing the script.
+- Make sure you have R installed on your machine. If not, download and install R from https://www.r-project.org/.
 
 The following R package must be installed:
 
@@ -23,3 +27,36 @@ You can install this package in R with the following command:
 ```r
 install.packages("stats")
 ```
+
+# Usage 
+
+From the command line, the script can be run as follows:
+
+```text
+Rscript BF-script.R [function] [alpha] [beta] [epsilon] [file] [column_indices]
+
+function          Either BF_Gamma or BF_Beta.
+alpha             Numeric value for the alpha parameter.
+beta              Numeric value for the beta parameter.
+epsilon           Numeric value for the epsilon parameter.
+file              Path to the MCMC sample file.
+column_indices    Column indices, separated by spaces. Ranges can be specified using ':'.
+```
+
+For example:
+
+```r
+Rscript BF-script.R BF_Gamma 2 10 0.1 /path/to/mcmc_file.txt 10 12:15
+```
+
+would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.1, an MCMC sample file located at /path/to/mcmc_file.txt, and column indices of 10, 12 through 15.
+
+This example uses the \texttt{BF\_Gamma} function with \texttt{alpha} = 2, \texttt{beta} = 10, \texttt{epsilon} = 0.1, an MCMC sample file located at \texttt{/path/to/mcmc\_file.txt}, and column indices of 10, 12 through 15.
+
+# References
+
+Jiayi Ji, Donavan J Jackson, Adam D Leach&eacute;, and Ziheng Yang. Power of bayesian and heuristic tests to detect cross-species
+introgression with reference to gene flow in the tamias quadrivittatus group of north american chipmunks. Systematic
+Biology, 2022. ISSN 1063-5157
+
+
