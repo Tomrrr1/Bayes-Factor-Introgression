@@ -12,7 +12,11 @@ where $\mathbb{P}(ø|x)$ represents the proportion of MCMC samples in which $\va
 
 # Installation
 
-The program is currently distributed as an R script.
+The program is currently distributed as an R script. To install and run do the following:
+
+- Clone the repository or download the source files.
+- Navigate to the directory containing the script.
+- Make sure you have R installed on your machine. If not, download and install R from https://www.r-project.org/.
 
 The following R package must be installed:
 
@@ -23,13 +27,6 @@ You can install this package in R with the following command:
 ```r
 install.packages("stats")
 ```
-
-To install and run the script do the following:
-
-- Clone the repository or download the source files.
-- Navigate to the directory containing the script.
-- Make sure you have R installed on your machine. If not, download and install R from \url{https://www.r-project.org/}.
-
 
 # Usage 
 
