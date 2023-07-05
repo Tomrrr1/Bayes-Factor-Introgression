@@ -10,7 +10,7 @@ $$
 
 where $\mathbb{P}(ø|x)$ represents the proportion of MCMC samples in which $\varphi$ or $M$ are less than $\epsilon$, and $\mathbb{P}(ø)$ refers to the probability that a random value taken from the prior distribution on $\varphi$ or M is less than $\epsilon$ (given by the cumulative distribution function). Intuitively, $B_{10} \ll 1$ is evidence for $H_0$ (null model: no gene flow) and $B_{10} \gg 1$ is evidence for $H_1$ (alternative model: gene flow).
 
-# Installation
+# Installation and Usage
 
 The program is currently distributed as an R script. To install and run do the following:
 
@@ -18,17 +18,11 @@ The program is currently distributed as an R script. To install and run do the f
 - Navigate to the directory containing the script.
 - Make sure you have R installed on your machine. If not, download and install R from https://www.r-project.org/.
 
-The following R package must be installed:
-
-- `stats` (>= 4.2.2)
-
-You can install this package in R with the following command:
+The `stats` package (>= 4.2.2) must be installed. This can be done with the following command:
 
 ```r
 install.packages("stats")
 ```
-
-# Usage 
 
 From the command line, the script can be run as follows:
 
@@ -48,7 +42,7 @@ For example:
 ```r
 Rscript BF-script.R BF_Gamma 2 10 0.01 /path/to/sample-mcmc.txt 25:30
 ```
-would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.01, an MCMC sample file located at /path/to/mcmc_file.txt, and column indices of 25:30. The MCMC file used in this example, along with the output file, can be found in the 'test' folder.
+would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.01, an MCMC sample file located at /path/to/mcmc_file.txt, and columns 25:30. The MCMC file used in this example, along with the output file, can be found in the 'test' folder. The usage instructions can be viewed by typing `Rscript BF-script.R --help`.
 
 # References
 
