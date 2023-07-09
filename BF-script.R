@@ -42,11 +42,9 @@ column_args <- args[6:length(args)]
 column_index <- integer(0)  # Empty integer vector to hold indices
 
 for (arg in column_args) {
-
   if (grepl(":", arg)) {
 
     range <- as.integer(strsplit(arg, ":")[[1]])
-
     column_index <- c(column_index, seq(range[1], range[2]))
 
   } else {
@@ -66,11 +64,8 @@ mcmc_file <- read.table(file, sep="\t", header=TRUE)
 compute_result_gamma <- function(i, mcmc_file, epsilon, alpha, beta) {
 
   mig_rate = mcmc_file[, i]
-  
   prior_prop = pgamma(epsilon, shape=alpha, rate=beta) # proportion of prior < epsilon (gamma prior)
-  
   posterior_prop = mean(mig_rate < epsilon) # proportion of posterior mcmc samples < epsilon
-  
   result = prior_prop / posterior_prop
   
   return(result)
@@ -121,11 +116,8 @@ BF_Gamma <- function(alpha, beta, epsilon, mcmc_file, column_index) {
 compute_result_beta <- function(i, mcmc_file, epsilon, alpha, beta) {
   
   mig_rate = mcmc_file[, i]
-  
   prior_prop = pbeta(epsilon, shape1 = alpha, shape2 = beta) # proportion of prior < epsilon
-  
   posterior_prop = mean(mig_rate < epsilon) # proportion of posterior < epsilon
-  
   result = prior_prop / posterior_prop
   
   return(result)
