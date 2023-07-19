@@ -24,6 +24,9 @@ Options:
         	epsilon         Numeric value for the epsilon parameter.
         	file            Path to the MCMC sample file.
         	column_indices  Column indices, separated by spaces. Ranges can be specified using ':'.
+
+	If the BF_Gamma option is selected then 'alpha' is the shape and 'beta' is the rate of the prior distribution.
+	If the BF_Beta option is selected then both 'alpha' and 'beta' are shape parameters of the prior distribution.
   
 Example:
   	Rscript BF-script.R BF_Gamma 2 10 0.1 /path/to/mcmc_file.txt 10 11:13\033[39m
