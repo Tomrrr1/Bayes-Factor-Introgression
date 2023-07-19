@@ -1,6 +1,6 @@
 # Bayesian test of introgression
 
-This repository implements the Bayesian test of introgression developed by Ji et al. (2023). The program calculates the Bayes factor via the Savage-Dickey density ratio using an MCMC sample under the MSci or MSC-M to evaluate the evidence for a proposed gene flow event. Note that the MSci models gene flow as a discrete event that occurred at some fixed time, with its magnitude estimated through the introgression probability, $\varphi$. In contrast, the MSC-M assumes continuous gene flow at a particular rate every generation, as denoted by the migration rate, $M$. Both the MSci and MSC-M are implemented in the Bayesian programe BPP (Flouri et al. 2018, 2020).
+This repository implements the Bayesian test of introgression developed by Ji et al. (2023). The program calculates the Bayes factor via the Savage-Dickey density ratio using an MCMC sample under the MSci or MSC-M to evaluate the evidence for a proposed gene flow event. Note that the MSci models gene flow as a discrete event that occurred at some fixed time, with its magnitude estimated through the introgression probability, $\varphi$. In contrast, the MSC-M assumes continuous gene flow at a particular rate every generation, as denoted by the migration rate, $M$. Both the MSci and MSC-M are implemented in the Bayesian program BPP (Flouri et al. 2018, 2020).
 
 The Bayes factor representing the evidence for $H_1$ (gene flow) over $H_0$ (no gene flow) is approximately
 
