@@ -24,8 +24,11 @@ The `stats` package (>= 4.2.2) must be installed. This can be done with the foll
 install.packages("stats")
 ```
 
+<<<<<<< HEAD
 The program accepts as input a BPP MCMC sample file. 
 
+=======
+>>>>>>> 41cb73c6d57f6555d77f0167487e0036e4ec9540
 From the command line, the script can be run as follows:
 
 ```text
@@ -47,11 +50,15 @@ For example:
 ```r
 Rscript BF-script.R BF_Gamma 2 10 0.01 /path/to/sample-mcmc.txt 25:30
 ```
+<<<<<<< HEAD
 would use the BF_Gamma function with alpha = 2 (shape), beta = 10 (rate), epsilon = 0.01, an MCMC sample file located at /path/to/mcmc_file.txt, and columns 25:30. The MCMC file used in this example, along with the output file, can be found in the 'test' folder.
 
 The output of the program is a text file containing the calculated Bayes factor for each proposed gene flow event. A Bayes factor threshold of 100 means strong support for $H_1$ and rejection of $H_0$ (which is similar to hypothesis testing at the 1\% significance level).
 
 The usage instructions can be viewed by typing `Rscript BF-script.R --help`.
+=======
+would use the BF_Gamma function with alpha = 2, beta = 10, epsilon = 0.01, an MCMC sample file located at /path/to/mcmc_file.txt, and columns 25:30. The MCMC file used in this example, along with the output file, can be found in the 'test' folder. The usage instructions can be viewed by typing `Rscript BF-script.R --help`.
+>>>>>>> 41cb73c6d57f6555d77f0167487e0036e4ec9540
 
 # References
 
