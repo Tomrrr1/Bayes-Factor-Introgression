@@ -106,7 +106,7 @@ BF_Gamma <- function(alpha, beta, epsilon, mcmc_file, column_index) {
 
 
   # Define output file path
-  output_file_path <- paste0("BF_Gamma_results_", Sys.Date(), "_", ".txt")
+  output_file_path <- paste0("BF_Gamma_results_", Sys.Date(), ".txt")
 
   # Write the results to a text file
   write.table(results_df, file = output_file_path, sep = "\t", quote = FALSE, row.names = TRUE)
@@ -156,7 +156,7 @@ BF_Beta <- function(alpha, beta, epsilon, mcmc_file, column_index) {
   rownames(results_df) <- row_names
   
   # Define output file path
-  output_file_path <- paste0("BF_Beta_results_", Sys.Date(), "_", ".txt")
+  output_file_path <- paste0("BF_Beta_results_", Sys.Date(), ".txt")
 
   # Write the results to a text file
   write.table(results_df, file = output_file_path, sep = "\t", quote = FALSE, row.names = TRUE)
